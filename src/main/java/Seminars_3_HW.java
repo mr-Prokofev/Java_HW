@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.IntStream;
 
 public class Seminars_3_HW {
     public static void main(String[] args) {
@@ -24,10 +25,19 @@ public class Seminars_3_HW {
         System.out.println(Collections.min(list_int));
         System.out.println(Collections.max(list_int));
 
+        //Среднее значение
+        double sum = 0;
+        for (int i : list_int) {
+            sum += i;
+        }
+        double avr = sum/list_int.size();
+
+
         // Поиск минимального и максимального с сортировкой
         list_int.sort(Comparator.naturalOrder());
-        System.out.printf("%s - Минимальное значение\n%s - Максимальное значение", list_int.get(0),
-                list_int.get(list_int.size()-1));
+        System.out.printf("%s - Минимальное значение\n%s - Максимальное значение %s - Среднее значение", list_int.get(0),
+                list_int.get(list_int.size()-1), avr);
+
 
         // Поиск минимального и максимального циклом
 //        int min = list_int.get(0);
