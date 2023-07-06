@@ -9,11 +9,11 @@ public class Seminars_3_HW {
 
         // Удаление из списка чётных чисел
         ArrayList<Integer> temp = new ArrayList<>();
-        for (int i = 0; i < list_int.size(); i++) {
-            if (list_int.get(i) % 2 == 0) {
-                temp.add(list_int.get(i));
+        for (Integer integer : list_int) {
+            if (integer % 2 == 0) {
+                temp.add(integer);
             }
-                   }
+        }
 
         System.out.println(list_int);
         System.out.printf("%s - Четные числа в tempe\n", temp); // Вывод четных чисел
